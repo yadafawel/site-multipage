@@ -1,0 +1,699 @@
+*{
+    box-sizing: border-box;
+}
+/* NORMALIZE */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* REGLAGES GENERAUX */
+body{
+    background-image: url('../img/bg.jpg');
+    scroll-behavior: smooth;
+    /* effet de scroll quand on clique sur une ancre - ne marche que sur Firefox, chrome et Opéra dernières versions */
+}
+h1{
+    font-size: 45px;
+    /* EMMET => fz45px + tab  */
+    font-family: "anton", sans-serif;
+    color: #2980b9;
+    text-align: center;
+    /* emmet => tac + tab  */
+    letter-spacing: 1px;
+    /* emmet => ls1 + tab  */
+}
+h2{
+    font-size: 35px;
+    color: #2c3e50;
+    padding: 20px;
+    /* emmet => p20 + tab  */
+    font-weight: bold;
+    /* EMMET => fwb + tab  */
+    text-shadow: 1px 1px 2px #aaa;
+    /* 4 valeurs : ombre horizontale, verticale, zone de flou, couleur de l'ombre */
+}
+h3{
+    font-size: 22px;
+    color: #2c3e50;
+    padding: 15px;
+    /* emmet => p15 + tab  */
+    text-shadow: 1px 1px 2px #aaa;
+    /* 4 valeurs : ombre horizontale, verticale, zone de flou, couleur de l'ombre */
+}
+h4{
+    text-align: center;
+    margin-top: 30px;
+    /* emmet => mt30 + tab  */
+}
+blockquote{
+    font-style: italic;
+    font-size: 120%;
+}
+strong{
+    font-weight: bold;
+    /* emmet => fwb + tab  */
+}
+/* --------------------------------HEADER--------------------------------------- */
+header{
+    background: #2c3e50;
+    height: 175px;
+    /* emmet => h175 + tab */
+}
+#logo{
+    float: left;
+    /* emmet => fl + tab  */
+    width: 25%;
+    background: #2c3e50;
+    padding: 15px;
+    text-align: center;
+}
+#slogan{
+    float: left;
+    width: 50%;
+    background: #2c3e50;
+    padding-top: 50px;
+    /* emmet => pt50 + tab */
+}
+#social{
+    float: left;
+    width: 25%;
+}
+#social i{
+    background: #2c3e50;
+    font-size: 30px;
+    text-align: right;
+    /* emmet => tar + tab  */
+    padding: 15px 30px 0 0;
+    display: block;
+    /* emmet => db + tab  */
+}
+header a{
+    color: #10828c;
+    text-decoration: none;
+    /* emmet => tdn + tab  */
+}
+/* -------------------------------FIN HEADER---------------------------------- */
+/* -----------------------------------NAV----------------------------------------- */
+nav{
+    background: #2980b9;
+    height: 70px;
+    border-bottom: 8px solid #6acafc;
+    text-align: center;
+    padding: 15px;
+}
+nav a{
+    margin: 10px;
+    padding: 2px 10px;
+    border-radius: 10px 0px;
+    border: 2px solid white;
+    background: #6acafc;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Nunito',sans-serif;
+    transition: 0.5s;
+}
+nav a:hover{
+    background: #a6d6c3;
+    color: white;
+}
+.activ{
+    background: #2c3e50;
+    color: white;
+}
+/* --------------------------------FIN NAV------------------------------------- */
+/* --------------------------------------MAIN--------------------------------------- */
+/* Faire le zoning avec des hauteur et largeur avant de palcer les element dans les zones pour ensuite supprimer les hauteurs */
+main{
+    background: rgba(178, 178, 178, 0.3);
+    width: 1000px;
+    margin: 0 auto;
+}
+aside{
+    height: 250px;
+    background: #a6d6c3;
+}
+section{
+    margin-top: 50px;
+    background: #daf7a6;
+    padding: 20px;
+}
+footer{
+    background: #2980b9;
+    height: 30px;
+}
+/* ---------------------------------FIN MAIN--------------------------------- */
+/* -----------------------------PAGE TEXTE-------------------------------- */
+.oswald p{
+    font-family:"Nunito" sans-serif;
+}
+/* -----------------------------FIN PAGE TEXTE-------------------------------- */
+/* -----------------------------DEBUT PAGE SELECTEURS-------------------------------- */
+.select p{
+    color:red;
+}
+.select p:first-of-type{
+    color: pink;
+}
+.select p:last-of-type{
+    color: pink;
+}
+.select p:nth-of-type(5),
+.select p:nth-of-type(6){
+    color: black;
+}
+.select p:nth-of-type(3){
+    color: orange;
+}
+.select div:not(.zoneB){
+    font-weight: bold;
+}
+.select .zoneA{
+    color: #996633;
+}
+.select .zoneB{
+    color: #f56f56;
+}
+.select .zoneB .couleurBlue{
+    color: blue;
+    font-size: 16px;
+}
+.select #zoneC{
+    color: #98f32f;
+}
+.select #zoneD span{
+    color: #32ff32;
+    font-size: 30px;
+    font-style: italic;
+}
+/* *************************************** FIN PAGE SELECTEURS ******************************************** */
+/* *************************************** DEBUT PAGE IAMGE *********************************************** */
+.imageFond{
+    background:#000 url('../img/fond.jpg') no-repeat;
+    background-size: cover;
+}
+.imageFond p{
+    width: 75%;
+    margin: 100px auto 200px auto;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 120%;
+    border-radius: 10px;
+    padding: 20px;
+}
+img[src="img/toureiffel.jpg"] {
+    margin: auto;
+    width: 250px;
+    display: block;
+}
+.rotationImg{
+    text-align: center;
+}
+.image{
+    margin: 20px;
+    border: 5px solid #eee;
+    /* rgba sera utilisé dans ce cas pour créer une ombre à mon image */
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: 1s;
+}
+.image:hover{
+    transform: rotate(-7deg);
+    border: 15px solid #eee;
+}
+.rotation360:hover{
+    transform: rotate(-360deg);
+}
+/* *******************************FIN PAGE IMAGE********************************* */
+/* *********************************BUTTON TOP**************************** */
+button{
+    position:fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 250%;
+    color: rgba(7, 30, 34, 0.5);
+}
+/* ***********************************FIN PAGE BOUTON TOP************************************ */
+/* **************************************PAGE POSITION*********************************** */
+.centre{
+    background: #33cccc;
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+}
+.absolute{
+    position: absolute;
+    background: orange;
+    width: 100px;
+    height: 100px;
+    top: 25%;
+    left: 10%;
+}
+.relative{
+    background: #2d5c7f;
+    width: 400px;
+    height: 40px;
+    position: relative;
+    bottom: 10px;
+    left: 100px;
+}
+.relative div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #fff1a8;
+}
+
+button{
+    position: fixed;
+    bottom: 4px;
+    right: 20px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 350%;
+    color: #2d5c7f;
+}
+.trente{
+    width: 30%;
+    padding: 20px;
+    font-size: 22px;
+    background: #3c1b1f;
+    color: #f6e1bf;
+    font-weight: bold;
+}
+
+.cinquante{
+    width: 30%;
+    padding: 20px;
+    font-size: 22px;
+    background: #3c1b1f;
+    color: #f6e1bf;
+    font-weight: bold;
+    margin-top: 7px;
+}
+.cent{
+    width: 100%;
+    padding: 20px;
+    font-size: 22px;
+    background: #b21e4b;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+
+
+/* ************************************************************************************************** */
+
+/* .float{
+    height: 170px;
+    width: 170px;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    background: #f8d771;
+    bottom: 2px solid darkred;
+}
+
+.dernier{
+    height: 170px;
+    margin: 170px;
+    padding: 10px;
+    padding-top: 2px;
+    text-align: center;
+    font-size: 25px;
+    background: #f8d771;
+    bottom: 2px solid darkred;
+}
+
+.clear{
+    clear: both;
+} */
+
+/* *******************************Zoning***************************** */
+.zoning1{
+    background: #ffd6d6;
+    width: 800px;
+    text-align: center;
+    text-shadow: 1px 1px 2px darkgray;
+    margin: auto;
+}
+
+.zoning1 header{
+    height: 70px;
+    background: #f7f39a;
+
+}
+
+.zoning1 aside{
+    height: 525px;
+    float: left;
+    width: 20%;
+    background: #a3de83;
+}
+.zoning1 section{
+    float: left;
+    background: #38817a;
+    height: 525px;
+    width: 80%;
+    padding: 0;margin: 0;
+}
+
+
+/* ***********************************zoning 2****************************** */
+
+.zoning2{
+    background: #ffd6d6;
+    width: 500px;
+    text-align: center;
+    text-shadow: 1px 1px 1px darkgray;
+    margin: auto;
+}
+.zoning2 header{
+    height: 70px;
+    background: #fffffd;
+
+}
+
+.zoning2 aside{
+    height: 525px;
+    float: left;
+    width: 20%;
+    background: #a3de83;
+    color: white;
+}
+
+.zoning2 .middle{
+    float: left;
+    background: #030470;
+    height: 525px;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    
+}
+.clear{
+    clear: both;
+}
+
+
+
+/* ******************************************zoning3************************************ */
+
+.zoning3{
+    background: #ffd6d6;
+    width: 800px;
+    text-align: center;
+    text-shadow: 1px 1px 1px darkgray;
+    color: white;
+    margin: auto;
+}
+
+.zoning3 section{
+    height:525px ;
+    float: left;
+    width: 50%;
+    background: #205dd6;
+    margin: 0;
+    padding: 0;
+
+}
+.zoning3 footer{
+    height: 70px;
+    float: left;
+    width: 100%;
+    background: #d8ebb5;
+    color: #000;
+}
+.zoning3 section :nth-of-type(2){
+    background: #639a67;
+}
+
+/* *****************************************************zoning 4*********************************** */
+
+.zoning4{
+    background: #fff;
+    text-align-last: left;
+    text-shadow: 1px 1px 2px darkgray;
+    bottom: 2px solid black;
+    margin: 0 auto;
+    width: 700px;
+}
+.zoning4 header{
+    height: 90px;
+    background: #d8dfe2;
+
+}
+.zoning4 nav{
+    height: 50px;
+    background: #71adb5;
+}
+.zoning4 section{
+    height: 500px;
+    background: #176d81;
+    margin: 20px;
+    padding: 0;
+}
+.zoning4 footer{
+    height:75px;
+    background: #0d3446;
+
+}
+
+.zoning4 section, footer{
+    color: white;
+}
+
+/* **********************************zoning 5********************************************************* */
+
+.zoning5{
+    background: orange;
+    text-align: center;
+    text-shadow: 1px 1px 2px darkgray;
+    bottom: 2px solid black;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #fff;
+}
+.zoning5 header{
+    height: 90px;
+    background: #f8d771;
+}
+.zoning5 nav{
+    height: 50px;
+    background: #d6bc6b;
+    border-bottom: 8px solid black;
+}
+.zoning5 .section{
+    background: #176d81;
+    margin: 20px;
+    padding: 0;
+}
+
+.zoning5 .section .z1, .z2, .z3, .z4{
+    height: 250px;
+    width: 50%;
+    float: left;
+}
+.zoning5 .z1, .z4{
+    background: #d6bc6b;
+}
+.zoning5 .z2, .z3{
+    background: #13b9c2;
+}
+.zoning5 footer{
+    height: 75px;
+    background: #f8d771;
+}
+
+.zoning5 section, footer{
+    color: black;
+}
+
+
+/* ********************************zoning 6******************************* */
+
+.zoning6{
+    width: 800px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+
+}
+
+.zoning6 header{
+    background: #40a497;
+    height: 180px;
+}
+.haut1{
+float: left;
+width: 25%;
+height: 100%;
+background: #203562;
+
+}
+.haut2{
+float: left;
+width: 50%;
+height: 100%;
+background: #3e588f;
+
+}
+.haut3{
+float: left;
+width: 25%;
+height: 100%;
+background: #0b5269;
+
+}
+
+
+.zoning6 nav{
+    background: #0b5269;
+    height: 30px;
+    border: none;
+}
+
+
+.zoning6 aside{
+    background: #446878;
+    width: 20%;
+    height: 650px;
+    float: left;
+}
+
+.zoning6 section{
+    width: 80%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow{
+    background: #314a52;
+    height: 250px;
+}
+
+.zoning6 .a{
+    background: #c0d5cd;
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+.zoning6 .b{
+    background: #203562;
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+.zoning6 .c, .e{
+     background: #c0d5cd;
+    width: 25%;
+    height: 150px;
+    float: left;
+}
+
+.zoning6 .d, .f{
+  background: #203562;
+    width: 25%;
+    height: 150px;
+    float: left;
+}
+
+.zoning6 footer {
+    background: #0b5269;
+    height: 50px;
+    color: white;
+}
+
+/* ******************************************************fin zoning********************************************** */
+
+
+/* *********************************************************Tableau*********************************************************** */

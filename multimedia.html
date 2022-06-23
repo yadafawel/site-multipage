@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil </title>
+    <link rel="stylesheet" href="css/multi.css">
+    <!-- Choissisez une police google et ajouter la ici -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gentium+Plus&family=Indie+Flower&family=Macondo&family=Montserrat:wght@100&family=Oleo+Script+Swash+Caps&family=Roboto+Slab:wght@100;200&display=swap"
+        rel="stylesheet">
+    <!-- On ira ajouter dans la css ensuite font-family 'Nuito', sans-seri -->
+    <!-- <link rel="stylesheet" href="font-awesome/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="une site multie page HTML - css">
+</head>
+
+<body>
+
+    <header>
+        <div id="logo">
+            <a href="#logo">
+                <button type="button">
+                    <i class="fas fa-arrow-alt-circle-up" aria-hidden="true"></i>
+                    <!-- fa => class de font awesome -->
+                    <!-- aria-... accés de contenues web plus facile pour les persons en situation handicapés -->
+                    <!-- https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA -->
+                </button>
+            </a>
+            <img src="img/logo.png" alt="logo">
+        </div>
+
+        <div id="slogan">
+            <h1>Site Html CSS multipages</h1>
+        </div>
+
+        <div id="social">
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+            </a </div> </header> <nav id="activ_nav">
+            <a href="acceuil.html">Acceuil</a>
+            <a href="selecteur.html">Sellecteur</a>
+            <a href="Text.html">Text</a>
+            <a href="image.html">Image</a>
+            <a href="position.html">Position</a>
+            <a href="zoning.html">Zoning</a>
+            <a href="tableau.html">Tableau</a>
+            <a href="liste.html">Liste</a>
+            <a href="lien.html">Lien</a>
+            <a href="formulaire.html">Formulaire</a>
+            <a href="multimedia.html">Multimedia</a>
+            <a href="animation.html">Animation</a>
+
+
+            </nav>
+
+
+        <main>
+        <h2>multiMedia</h2>
+            <section class="videoFond" >
+                <h3>vedio en fond</h3>
+                <div class="videoTexte">
+                    <video autoplay loop>
+                        <!-- Les attributs "autoplay" => lecture automatique et loop => lecture en boucle -->
+                        <source src="video/videoBackground.webm" type="video/webm">
+                        <source src="video/videoBackground.mp4" type="video/mp4">
+                    </video>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, vero corporis commodi laborum nihil assumenda esse labore ipsa veritatis. Veritatis porro incidunt nesciunt est impedit quibusdam eaque architecto modi maiores?
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h3>védio youtube</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gliv_skuGL8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </section>
+            
+            <section class="audio">
+                <h3>Audio</h3>
+                <h4>format MP3</h4>
+                <br>
+                <audio src="audio/son.mp3" controls></audio>
+                <h4>forma ogg</h4>
+                <audio src="audio/son.ogg" controls></audio>
+            </section>
+
+            <section>
+                <h3>google maps</h3>
+                
+            </section>
+        </main>
+        <footer></footer>
+        <script type="text/javascript" src="js/active.js"></script>
+
+</body>
+
+</html>
